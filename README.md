@@ -79,7 +79,7 @@ The simulation waveform demonstrates:
 
 ### Simulation Screenshot
 
-![Digital Clock Simulation Waveform]([images/digital_clock_waveform.png](https://github.com/chittamchetri1-collab/Digital-Clock/blob/main/waveform.png))
+![Digital Clock Simulation Waveform]((https://github.com/chittamchetri1-collab/Digital-Clock/blob/main/waveform.png))
 
 *Figure 1: Vivado behavioral simulation waveform showing the seconds, minutes, and hours counter transitions.*
 

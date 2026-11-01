@@ -28,33 +28,6 @@ The project consists of the following functional blocks:
 4. **Hours Counter:** Counts from 00 to 23 and increments when the minutes counter completes one cycle.
 5. **Top-Level Module:** Integrates the clock divider and counter modules into a complete digital clock design.
 
-### Block Diagram
-
-```text
-             100 MHz Clock
-                   |
-                   v
-            +--------------+
-            | Clock Divider|
-            |  27-bit      |
-            |  Counter     |
-            +--------------+
-                   |
-                clk_div
-                   |
-                   v
-          +-------------------+
-          | Digital Clock     |
-          | Counter System    |
-          +-------------------+
-                   |
-          +--------+--------+
-          |        |        |
-          v        v        v
-       Seconds  Minutes   Hours
-       Counter  Counter   Counter
-        00-59    00-59     00-23
-```
 
 ## 4. Technologies and Tools Used
 
@@ -106,7 +79,7 @@ The simulation waveform demonstrates:
 
 ### Simulation Screenshot
 
-![Digital Clock Simulation Waveform](images/digital_clock_waveform.png)
+![Digital Clock Simulation Waveform]([images/digital_clock_waveform.png](https://github.com/chittamchetri1-collab/Digital-Clock/blob/main/waveform.png))
 
 *Figure 1: Vivado behavioral simulation waveform showing the seconds, minutes, and hours counter transitions.*
 
@@ -143,21 +116,6 @@ The synthesized design uses 46 flip-flops for sequential logic.
 | Registers with Asynchronous Reset | 0 |
 | Registers with Clock Enable | 46 |
 
-### FPGA Primitive Utilization
-
-| Primitive | Used |
-|---|---:|
-| FDRE | 46 |
-| LUT6 | 8 |
-| CARRY4 | 7 |
-| LUT2 | 4 |
-| LUT1 | 4 |
-| LUT5 | 3 |
-| LUT3 | 3 |
-| IBUF | 2 |
-| LUT4 | 1 |
-| BUFG | 1 |
-| OBUF | 17 |
 
 ### Resource Analysis
 

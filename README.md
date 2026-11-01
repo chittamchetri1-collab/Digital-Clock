@@ -1,4 +1,3 @@
-# Digital-Clock
 # Digital Clock Design Using Verilog HDL and Xilinx Vivado
 
 ## 1. Project Overview
@@ -28,7 +27,6 @@ The project consists of the following functional blocks:
 4. **Hours Counter:** Counts from 00 to 23 and increments when the minutes counter completes one cycle.
 5. **Top-Level Module:** Integrates the clock divider and counter modules into a complete digital clock design.
 
-
 ## 4. Technologies and Tools Used
 
 | Category | Technology |
@@ -39,7 +37,7 @@ The project consists of the following functional blocks:
 | Target Device | xc7k70tfbv676-1 |
 | Verification | Behavioral Simulation |
 | Synthesis Analysis | Vivado Synthesis |
-| Debugging | Integrated Logic Analyzer (ILA) - planned |
+| Debugging | Integrated Logic Analyzer (ILA) - Planned |
 
 ## 5. Verilog Modules
 
@@ -77,24 +75,28 @@ The simulation waveform demonstrates:
 - Minutes rollover from 59 to 00.
 - Hours increment from 1 to 2 following the minute rollover.
 
-### Simulation Screenshot
+### Simulation Waveforms
 
-![Digital Clock Simulation Waveform]((https://github.com/chittamchetri1-collab/Digital-Clock/blob/main/waveform.png))
+The following waveform screenshots were captured using **Xilinx Vivado 2025.2 Behavioral Simulation**. They illustrate the operation of the digital clock counters and their cascading behavior.
 
-*Figure 1: Vivado behavioral simulation waveform showing the seconds, minutes, and hours counter transitions.*
+**Waveform 1 – Digital Clock Counter Simulation**
+
+
+
+![Digital Clock Waveform 1](https://github.com/chittamchetri1-collab/Digital-Clock/blob/main/waveform.png)
+
+**Waveform 2 – Additional Simulation Results**
+
+
+
+![Digital Clock Waveform 2](https://github.com/chittamchetri1-collab/Digital-Clock/blob/main/waveform2.png)
+
+*Both screenshots provide visual evidence of the digital clock's behavioral simulation in Vivado.*
 
 **Verification Tool:** Xilinx Vivado 2025.2  
 **Verification Method:** Verilog Behavioral Simulation
 
-## 7. FPGA Resource Utilization Report
-
-The FPGA resource utilization was analyzed using the Vivado `report_utilization` command after synthesis.
-
-**Target Device:** xc7k70tfbv676-1  
-**Design Name:** digital_clock_top  
-**Synthesis Tool:** Xilinx Vivado 2025.2
-
-### Resource Utilization Summary
+### 7.1 Resource Utilization Summary
 
 | FPGA Resource | Used | Available | Utilization |
 |---|---:|---:|---:|
@@ -105,7 +107,7 @@ The FPGA resource utilization was analyzed using the Vivado `report_utilization`
 | Bonded IOBs | 19 | 300 | 6.33% |
 | BUFGCTRL | 1 | 32 | 3.13% |
 
-### Register Utilization
+### 7.2 Register Utilization
 
 The synthesized design uses 46 flip-flops for sequential logic.
 
@@ -116,8 +118,7 @@ The synthesized design uses 46 flip-flops for sequential logic.
 | Registers with Asynchronous Reset | 0 |
 | Registers with Clock Enable | 46 |
 
-
-### Resource Analysis
+### 7.3 Resource Analysis
 
 - The design utilizes only 17 LUTs (0.04%) of the available slice LUT resources.
 - A total of 46 slice registers (0.06%) are used for sequential operations.
@@ -133,16 +134,16 @@ These results indicate that the synthesized digital clock design has a relativel
 
 | Project Stage | Status |
 |---|---|
-| Verilog module development | Completed |
-| Top-level module integration | Completed |
-| Behavioral simulation | Performed |
-| Counter rollover verification | Observed in simulation |
-| RTL elaboration | Completed |
-| FPGA synthesis | Completed |
-| FPGA implementation | Completed |
-| Resource utilization analysis | Completed |
-| ILA-based hardware debugging | Pending |
-| Physical FPGA board testing | Not yet verified |
+| Verilog Module Development | Completed |
+| Top-Level Module Integration | Completed |
+| Behavioral Simulation | Performed |
+| Counter Rollover Verification | Observed in Simulation |
+| RTL Elaboration | Completed |
+| FPGA Synthesis | Completed |
+| FPGA Implementation | Completed |
+| Resource Utilization Analysis | Completed |
+| ILA-Based Hardware Debugging | Pending |
+| Physical FPGA Board Testing | Not Yet Verified |
 
 ## 9. Future Improvements
 
